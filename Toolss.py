@@ -11,9 +11,9 @@ def menu():
 ....##....##.....##.##.....##.##.......##....##.##....##
 ....##.....#######...#######..########..######...######.
 ========================================
-Created By AnonHacker
+Created By AzrJailbreak
 Channel: youtube.com/kalinuxx
-Facebook: facebook.com/kalinuxtutorials
+Facebook: https://www.facebook.com/azhar.ahyat.71
 Ver: 2.0
 ----
 ONLY FOR TERMUX!
@@ -40,6 +40,7 @@ ONLY FOR TERMUX!
 17. Install Hash-Buster
 18. Install D-TECT
 19. Install routersploit
+20. Install Pentmenu
 ------------------------------------------
 99. Exit
 ==========================================
@@ -434,14 +435,14 @@ while loop:
             menu()
         else:
             break
-            os.system("pkg update -y")
-            os.system("pkg install -y git")
-            os.system("pkg install -y python2")
-            os.system("cd /data/data/com.termux/files/home && git clone https://github.com/reverse-shell/routersploit.git")
-            os.system("cd /data/data/com.termux/files/home && cd routersploit")
-            os.system("pip2 install -r requirements.txt")
-            os.system("pip2 install -r requirements-dev.txt")
-            os.system("pip2 install -r requests")
+         pkg update -y
+         pkg install -y git
+         pkg install -y python2
+         cd /data/data/com.termux/files/home && git clone https://github.com/reverse-shell/routersploit.git
+         cd /data/data/com.termux/files/home && cd routersploit
+         pip2 install -r requirements.txt
+         pip2 install -r requirements-dev.txt
+         pip2 install -r requests
             print("====================================")
             print("[+] routersploit installed successfully :)")
             print("[+] Go to routersploit folder and type 'python2 rsf.py' to start.")
@@ -450,6 +451,20 @@ while loop:
             if rmenu == "y":
                 menu()
             else:
+                break
+            pkg -y install git
+            git clone https://github.com/GinjaChris/pentmenu.git
+            cd pentmenu
+            chmod +x pentmenu
+            ./pentmenu
+            print("====================================")
+            print("[+] routersploit installed successfully :)")
+            print("[+] Go to pentmenu folder and type ' pentmenu ' to start.")
+            print("====================================")
+            rmenu = input("[?] Back to Menu? (y/n): ")
+            if rmenu == "y":
+                menu()
+                else:
                 break
     elif what == "99":
         print("Bye.")
