@@ -435,7 +435,7 @@ while loop:
             menu()
         else:
             break
-         pkg update -y
+         pkg update 
          pkg install -y git
          pkg install -y python2
          cd /data/data/com.termux/files/home && git clone https://github.com/reverse-shell/routersploit.git
